@@ -1,0 +1,158 @@
+/* CSS reset and for univresal web page  */
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(
+    150deg,
+    rgba(255, 223, 218, 0.8) 10%,
+    rgba(0, 187, 150, 0.07),
+    rgba(253, 244, 218, 0.7)
+  );
+}
+.container::after {
+  filter: blur(100%);
+}
+.container .links{
+    position: absolute;
+    right: 12px;
+    bottom: 5px;
+}
+.container .links ul{
+    display: flex;
+    gap: 17px;
+    list-style: none;
+}
+.container .links ul li a{
+    font-size: 12px;
+    color: black;
+    text-decoration: none;
+}
+.container .links ul li #dots{
+    font-size: 25px;
+    letter-spacing: -2.5px;
+    line-height: 0px;
+}
+.container .Box_one {
+  width: 440px;
+  height: 340px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 25%);
+}
+
+.container .Box_one h1 {
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.container .Box_one input {
+  width: 100%;
+  height: 30px;
+  margin-top: 13px;
+  border: none;
+  border-bottom: 1px solid rgb(0, 0, 200);
+  font-size: 17px;
+}
+
+.container .Box_one #create {
+  margin-top: 17px;
+  font-size: 12px;
+}
+
+.container .Box_one #create a {
+  color: #0067b8;
+  text-decoration: none;
+}
+
+.container .Box_one #security {
+  display: inline-block;
+  margin-top: 17px;
+}
+
+.container .Box_one #security a {
+  color: #0067b8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.que_mark_logo {
+  display: inline-block;
+  position: relative;
+}
+
+.container .Box_one .que_mark_logo img {
+  width: 17px;
+  position: absolute;
+  top: -12px;
+  left: 5px;
+}
+
+.container .Box_one button {
+  width: 100px;
+  height: 30px;
+  margin: 30px 0px 0px 72.5%;
+  color: white;
+  background-color: #0067b8;
+  border: none;
+  font-size: 15px;
+}
+
+.Box_two {
+  width: 440px;
+  height: 50px;
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 20%);
+}
+.key_logo {
+  position: relative;
+}
+.Box_two .key_logo img {
+  width: 21px;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  transform: rotateY(180deg);
+}
+.Box_two .key_logo p {
+  color: #555;
+  line-height: 50px;
+  padding-left: 80px;
+}
+
+/* todo ------------Responsive Design with Media query------------- */
+@media screen and (max-width: 549px) {
+  .container {
+    display: block;
+    background: white;
+  }
+  .container .links{
+    left: 12px;
+  }
+  .container .Box_one,
+  .Box_two {
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    height: auto;
+  }
+  .Box_two {
+    width: 90%;
+    margin-inline: 5vw;
+    border: 1px solid gray;
+  }
+  
+}
